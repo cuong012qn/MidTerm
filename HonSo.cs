@@ -160,7 +160,9 @@ namespace MidTerm
         /// <returns>x(y/z)</returns>
         public string ConvertToString()
         {
-            return string.Format("x(y/z): {0}({1}/{2})", _PhanNguyen, _PhanTu, _PhanMau);
+            if (_PhanNguyen == 0) return string.Format("{0}/{1}", _PhanTu, _PhanMau);
+
+            return string.Format("{0}({1}/{2})", _PhanNguyen, _PhanTu, _PhanMau);
         }
 
         /// <summary>
@@ -234,7 +236,7 @@ namespace MidTerm
         /// <returns>Trả về dạng nghịch đảo</returns>
         public HonSo NghichDao()
         {
-            HonSo honso = new HonSo(_PhanNguyen, _PhanMau, _PhanTu);
+            HonSo honso = new HonSo(0, _PhanMau, (_PhanNguyen * _PhanMau) + _PhanTu);
             return honso;
         }
 
