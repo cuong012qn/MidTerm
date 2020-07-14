@@ -15,7 +15,7 @@ namespace MidTerm
             Console.WriteLine("{0} - {1} = {2}", honso1.ConvertToString(), honso2.ConvertToString(),
                 honso1.Tru(honso2).ConvertToString());
             Console.WriteLine("Gia tri so thuc " + honso1.GiaTri());
-            Console.WriteLine("Nghich dao " + honso1.NghichDao());
+            Console.WriteLine("Nghich dao " + honso1.NghichDao().ConvertToString());
             Console.ReadKey();
         }
 
